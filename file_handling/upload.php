@@ -19,8 +19,8 @@
                     echo " File" . $_FILES["file"]["name"] ."already Exists";
                 }
                 else{
-                    move_uploaded_file($_FILES["file"]["name"],"upload/" .$_FILES["file"]["name"]);
-                    echo "stored in : "  ."upload/" .$_FILES["file"]["name"];
+                    move_uploaded_file($_FILES["file"]["tmp_name"], "upload/" . $_FILES["file"]["name"]);
+                    echo "Stored in: " . "upload/" . $_FILES["file"]["name"];
                 }
             }
         }
